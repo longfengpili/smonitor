@@ -85,3 +85,42 @@ curl localhost:3900
 ```
 
 # jmx_config
+## [authentication](http://prometheus.github.io/jmx_exporter/1.1.0/http-mode/authentication/)
++ 计算方法
+```python
+import hashlib
+# 创建一个新的sha256哈希对象
+sha256_hash = hashlib.sha256()
+
+password = f"{salt}:{secret}"
+
+# 更新哈希对象，使用盐和密码（以字节形式）
+sha256_hash.update(password.encode('utf-8'))
+
+# 返回盐和哈希值的十六进制表示
+result = sha256_hash.hexdigest()
+```
+```python
+import hashlib
+
+salt = "U9i%=N+m]#i9yvUV:bA/3n4X9JdPXf=n"
+password = "secret"
+hash_input = f"{salt}:{password}".encode('utf-8')
+password_hash = hashlib.sha256(hash_input).hexdigest()
+
+print(password_hash)  # 应该是你的散列值
+```
+
++ prometheus增加密码
+```yaml
+  - job_name: 'strino'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['192.168.2.154:3900']
+        labels:
+          env: sandbox
+
+    basic_auth:
+      username: Prometheus
+      password: secret
+```

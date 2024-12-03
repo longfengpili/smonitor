@@ -35,7 +35,7 @@ scrape_configs:
     metrics_path: '/metrics'
     static_configs:
       - targets: ['192.168.2.154:3900']
-        labels: 
+        labels:
           env: sandbox
 
     basic_auth:
