@@ -54,7 +54,7 @@ curl ip:9100
 ```
 
 # trino monitor
-1. 下载jmx_prometheus_javaagent
+1. 下载[jmx_prometheus_javaagent](https://github.com/prometheus/jmx_exporter)
 ```base
 mkdir jmx-exporter
 wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.19.0/jmx_prometheus_javaagent-0.19.0.jar -O jmx-exporter/jmx_prometheus_javaagent-0.19.0.jar
@@ -83,3 +83,5 @@ curl localhost:3900
     static_configs:
       - targets: ['host:3900']
 ```
+
+# jmx_config
