@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "id": 1,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -38,7 +38,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+        "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
       },
       "fieldConfig": {
         "defaults": {
@@ -119,10 +119,7 @@
       "type": "state-timeline"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -192,10 +189,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -275,10 +269,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -349,10 +340,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -422,10 +410,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -670,7 +655,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+        "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
       },
       "description": "",
       "fieldConfig": {
@@ -715,8 +700,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -772,7 +756,7 @@
             "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
           },
           "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_ConsumedInputBytes_TotalCount{job=~\"$job\"}[$__rate_interval])",
+          "expr": "rate(trino_execution_QueryManager_ConsumedInputBytes_TotalCount{job=~\"$job\"}[$__rate_interval])",
           "hide": false,
           "instant": false,
           "legendFormat": "ConsumedInputBytes",
@@ -785,7 +769,7 @@
             "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
           },
           "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_ConsumedInputRows_TotalCount{job=~\"$job\"}[$__rate_interval])",
+          "expr": "rate(trino_execution_QueryManager_ConsumedInputRows_TotalCount{job=~\"$job\"}[$__rate_interval])",
           "hide": false,
           "instant": false,
           "legendFormat": "ConsumedInputRows",
@@ -797,10 +781,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "过去一分钟内完成的所有查询任务的平均执行时间",
       "fieldConfig": {
         "defaults": {
@@ -844,8 +825,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -913,10 +893,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1014,10 +991,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1116,10 +1090,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1218,10 +1189,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1320,10 +1288,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1422,10 +1387,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1524,10 +1486,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1628,10 +1587,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1741,10 +1697,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1872,10 +1825,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1945,10 +1895,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2019,10 +1966,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2105,10 +2049,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2187,10 +2128,7 @@
       "type": "state-timeline"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2356,10 +2294,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2473,10 +2408,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "\n+ **CodeHeap 'profiled nmethods'**: 这部分内存用于存储经过JIT编译和优化的Java方法。\n+ **PS Eden Space**: 新生代的Eden区域，在GC后已被清空。\n+ **CodeHeap 'non-profiled nmethods'**: 存储未经过JIT优化的Java方法。\n+ **Compressed Class Space**: 用于存储类元数据。此空间在开启压缩指针模式时有效。\n+ **PS Survivor Space**: 新生代的Survivor区域，GC后剩余。\n+ **PS Old Gen**: 用于存放长期存活的对象，也称为老年代。\n+ **Metaspace**: 存储类元数据，自Java 8起替代PermGen。\n+ **CodeHeap 'non-nmethods'**: 用于其他类型的代码存储。",
       "fieldConfig": {
         "defaults": {
@@ -2588,10 +2520,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2694,7 +2623,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+        "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
       },
       "description": "- `gc=\"PS MarkSweep\"`：表明PS MarkSweep（老年代垃圾收集器）。\n\n- `gc=\"PS Scavenge\"`：表明PS Scavenge（新生代垃圾收集器）。",
       "fieldConfig": {
@@ -2782,7 +2711,7 @@
             "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
           },
           "editorMode": "code",
-          "expr": "increase(jvm_gc_collection_seconds_count{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
+          "expr": "rate(jvm_gc_collection_seconds_count{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
           "hide": false,
           "instant": false,
           "legendFormat": "{{gc}}",
@@ -2794,10 +2723,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -2924,7 +2850,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+        "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
       },
       "description": "",
       "fieldConfig": {
@@ -3017,7 +2943,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max_over_time(java_lang_OperatingSystem_SystemCpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
+          "expr": "max_over_time(java_lang_OperatingSystem_SystemCpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__interval])",
           "instant": false,
           "legendFormat": "SystemCpuLoad",
           "range": true,
@@ -3030,7 +2956,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max_over_time(java_lang_OperatingSystem_CpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
+          "expr": "max_over_time(java_lang_OperatingSystem_CpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__interval])",
           "hide": false,
           "instant": false,
           "legendFormat": "CpuLoad",
@@ -3044,7 +2970,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max_over_time(java_lang_OperatingSystem_ProcessCpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
+          "expr": "max_over_time(java_lang_OperatingSystem_ProcessCpuLoad{job=~\"$job\", instance=~\"$instance\"}[$__interval])",
           "hide": false,
           "instant": false,
           "legendFormat": "ProcessCpuLoad",
@@ -3056,10 +2982,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
+      "datasource": {},
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -3230,7 +3153,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
         },
         "definition": "label_values(job)",
         "hide": 0,
@@ -3251,7 +3174,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -3261,7 +3184,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
         },
         "definition": "label_values({job=~\"$job\"},instance)",
         "hide": 0,
@@ -3282,7 +3205,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -3292,9 +3215,9 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
         },
-        "definition": "label_values({job=~\"$job\", instance=\"$instance\"},area)",
+        "definition": "label_values({job=~\"$job\", instance=~\"$instance\"},area)",
         "hide": 2,
         "includeAll": true,
         "multi": true,
@@ -3302,7 +3225,7 @@
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values({job=~\"$job\", instance=\"$instance\"},area)",
+          "query": "label_values({job=~\"$job\", instance=~\"$instance\"},area)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -3313,7 +3236,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -3323,7 +3246,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
         },
         "definition": "label_values({job=\"$job\", instance=~\"$instance\"},pool)",
         "hide": 2,
@@ -3344,7 +3267,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -3354,7 +3277,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          "uid": "af39f043-93d5-4b86-8b69-50e287f58fbd"
         },
         "definition": "label_values(jvm_memory_pool_collection_used_bytes{job=~\"$job\", instance=~\"$instance\"},pool)",
         "hide": 2,
@@ -3376,13 +3299,14 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Trino",
   "uid": "d705d0d1-dc54-4169-ac49-1efb2a5575d2",
-  "version": 79,
+  "version": 9,
   "weekStart": ""
 }
+
