@@ -1792,7 +1792,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1808,7 +1809,7 @@
             "h": 8,
             "w": 8,
             "x": 0,
-            "y": 64
+            "y": 89
           },
           "id": 305,
           "maxPerRow": 4,
@@ -2269,254 +2270,6 @@
         "x": 0,
         "y": 95
       },
-      "id": 19,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull",
-            "min",
-            "mean",
-            "max"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_SubmittedQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "instant": false,
-          "legendFormat": "SubmittedQueries",
-          "range": true,
-          "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_StartedQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "StartedQueries",
-          "range": true,
-          "refId": "B"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_AbandonedQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "AbandonedQueries",
-          "range": true,
-          "refId": "C"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "trino_execution_QueryManager_QueuedQueries{job=~\"$job\", instance=~\"$instance\"}",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "QueuedQueries",
-          "range": true,
-          "refId": "D"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "trino_execution_QueryManager_RunningQueries{job=~\"$job\", instance=~\"$instance\"}",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "RunningQueries",
-          "range": true,
-          "refId": "E"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_CompletedQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "CompletedQueries",
-          "range": true,
-          "refId": "F"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_FailedQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "FailedQueries",
-          "range": true,
-          "refId": "G"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_CanceledQueries_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "CanceledQueries",
-          "range": true,
-          "refId": "H"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_UserErrorFailures_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "UserErrorFailures",
-          "range": true,
-          "refId": "I"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_ExternalFailures_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "ExternalFailures",
-          "range": true,
-          "refId": "J"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_InternalFailures_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "InternalFailures",
-          "range": true,
-          "refId": "K"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "increase(trino_execution_QueryManager_InsufficientResourcesFailures_TotalCount{job=~\"$job\", instance=~\"$instance\"}[$__rate_interval])",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "InsufficientResourcesFailures",
-          "range": true,
-          "refId": "L"
-        }
-      ],
-      "title": "Queries",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": 3600000,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 13,
-        "w": 12,
-        "x": 12,
-        "y": 95
-      },
       "id": 22,
       "options": {
         "legend": {
@@ -2684,8 +2437,8 @@
       "gridPos": {
         "h": 13,
         "w": 12,
-        "x": 0,
-        "y": 108
+        "x": 12,
+        "y": 95
       },
       "id": 15,
       "options": {
@@ -2733,6 +2486,122 @@
         }
       ],
       "title": "Memory Area",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+      },
+      "description": "\n+ **CodeHeap 'profiled nmethods'**: 这部分内存用于存储经过JIT编译和优化的Java方法。\n+ **PS Eden Space**: 新生代的Eden区域，在GC后已被清空。\n+ **CodeHeap 'non-profiled nmethods'**: 存储未经过JIT优化的Java方法。\n+ **Compressed Class Space**: 用于存储类元数据。此空间在开启压缩指针模式时有效。\n+ **PS Survivor Space**: 新生代的Survivor区域，GC后剩余。\n+ **PS Old Gen**: 用于存放长期存活的对象，也称为老年代。\n+ **Metaspace**: 存储类元数据，自Java 8起替代PermGen。\n+ **CodeHeap 'non-nmethods'**: 用于其他类型的代码存储。",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": 3600000,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bytes"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 12,
+        "x": 0,
+        "y": 108
+      },
+      "id": 24,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "min",
+            "mean",
+            "max"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          },
+          "editorMode": "code",
+          "expr": "java_lang_PS_MarkSweep_LastGcInfo_memoryUsageBeforeGc_used{job=~\"$job\", instance=~\"$instance\", key=\"PS Old Gen\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "MemoryUsageBeforeGc-{{key}}",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
+          },
+          "editorMode": "code",
+          "expr": "java_lang_PS_MarkSweep_LastGcInfo_memoryUsageAfterGc_used{job=~\"$job\", instance=~\"$instance\", key=\"PS Old Gen\"}",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "MemoryUsageAfterGc-{{key}}",
+          "range": true,
+          "refId": "B"
+        }
+      ],
+      "title": "MemoryGC[PS Old Gen]",
       "type": "timeseries"
     },
     {
@@ -2948,7 +2817,7 @@
         "type": "prometheus",
         "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
       },
-      "description": "\n+ **CodeHeap 'profiled nmethods'**: 这部分内存用于存储经过JIT编译和优化的Java方法。\n+ **PS Eden Space**: 新生代的Eden区域，在GC后已被清空。\n+ **CodeHeap 'non-profiled nmethods'**: 存储未经过JIT优化的Java方法。\n+ **Compressed Class Space**: 用于存储类元数据。此空间在开启压缩指针模式时有效。\n+ **PS Survivor Space**: 新生代的Survivor区域，GC后剩余。\n+ **PS Old Gen**: 用于存放长期存活的对象，也称为老年代。\n+ **Metaspace**: 存储类元数据，自Java 8起替代PermGen。\n+ **CodeHeap 'non-nmethods'**: 用于其他类型的代码存储。",
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3000,7 +2869,7 @@
               }
             ]
           },
-          "unit": "bytes"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -3009,225 +2878,6 @@
         "w": 12,
         "x": 12,
         "y": 121
-      },
-      "id": 24,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull",
-            "min",
-            "mean",
-            "max"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "java_lang_PS_MarkSweep_LastGcInfo_memoryUsageBeforeGc_used{job=~\"$job\", instance=~\"$instance\", key=\"PS Old Gen\"}",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "MemoryUsageBeforeGc-{{key}}",
-          "range": true,
-          "refId": "A"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "java_lang_PS_MarkSweep_LastGcInfo_memoryUsageAfterGc_used{job=~\"$job\", instance=~\"$instance\", key=\"PS Old Gen\"}",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "MemoryUsageAfterGc-{{key}}",
-          "range": true,
-          "refId": "B"
-        }
-      ],
-      "title": "MemoryGC[PS Old Gen]",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": 3600000,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 13,
-        "w": 12,
-        "x": 0,
-        "y": 134
-      },
-      "id": 26,
-      "options": {
-        "legend": {
-          "calcs": [
-            "lastNotNull",
-            "min",
-            "mean",
-            "max"
-          ],
-          "displayMode": "table",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "mode": "multi",
-          "sort": "desc"
-        }
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-          },
-          "editorMode": "code",
-          "expr": "jvm_threads_state{job=~\"$job\", instance=~\"$instance\"}",
-          "hide": false,
-          "instant": false,
-          "legendFormat": "{{state}}",
-          "range": true,
-          "refId": "A"
-        }
-      ],
-      "title": "ThreadState1",
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "de81e353-f419-4d5b-b7f8-b1dd55e4f8a1"
-      },
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": 3600000,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 13,
-        "w": 12,
-        "x": 12,
-        "y": 134
       },
       "id": 25,
       "options": {
@@ -3288,7 +2938,7 @@
           "refId": "C"
         }
       ],
-      "title": "ThreadState2",
+      "title": "ThreadState",
       "type": "timeseries"
     },
     {
@@ -3360,7 +3010,7 @@
         "h": 13,
         "w": 12,
         "x": 0,
-        "y": 147
+        "y": 134
       },
       "id": 20,
       "options": {
@@ -3494,7 +3144,7 @@
         "h": 13,
         "w": 12,
         "x": 12,
-        "y": 147
+        "y": 134
       },
       "id": 21,
       "options": {
@@ -3755,6 +3405,6 @@
   "timezone": "",
   "title": "Trino",
   "uid": "d705d0d1-dc54-4169-ac49-1efb2a5575d2",
-  "version": 61,
+  "version": 72,
   "weekStart": ""
 }
