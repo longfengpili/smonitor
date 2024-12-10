@@ -1,6 +1,20 @@
 process_names:
-  - comm:
-    - docer
-    - bash
-    - prometheus
+  - name: "{{.Matches}}"
+    cmdline:
+    - 'docker'
+ 
+  - name: "{{.Matches}}"
+    cmdline:
+    - 'postgres'
 
+  - name: "{{.Matches}}"
+    cmdline:
+    - 'httpd'
+
+  - name: "{{.Matches}}"
+    cmdline:
+    - 'trino'
+
+  - name: "{{.Comm}}"
+    cmdline:
+    - '.+'
