@@ -48,3 +48,16 @@ scrape_configs:
         replacement: 'db(154)'
         action: replace
         regex: '192.168.2.154:3900'  # 仅在匹配时重命名
+        
+  - job_name: 'process'
+    static_configs:
+      - targets: ['192.168.2.154:9256']
+        labels: 
+          env: sandbox
+
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'process(154)'
+        action: replace
+        regex: '192.168.2.154:9256'  # 仅在匹配时重命名
