@@ -1,0 +1,6 @@
+process_names:
+  - comm:
+    - docer
+    - bash
+    - prometheus
+
