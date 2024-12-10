@@ -10,5 +10,5 @@ services:
       - 9256:9256
     volumes:
       - /proc:/host/proc
-      - $(pwd):/config
+      - .:/config
     restart: always
