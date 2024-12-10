@@ -1,3 +1,16 @@
+# process exporter
+[process exporter](https://github.com/ncabatoff/process-exporter)
+
+# 启动
+## bash
+```bash
+process-exporter -config.path filename.yml
+```
+## docker
+```bash
+docker-compose up -d
+```
+
 # process exporter功能
 如果想要对主机的进程进行监控，例如chronyd，sshd等服务进程以及自定义脚本程序运行状态监控。我们使用node exporter就不能实现需求了，此时就需要使用process exporter来做进程状态的监控。
 项目地址：https://github.com/ncabatoff/process-exporter
