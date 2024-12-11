@@ -13,6 +13,7 @@ process-exporter -config.path filename.yml
 mkdir ~/procs
 cp ./startup.sh ~/procs/startup.sh
 cp ./process.yml ~/procs/process.yml
+chmod +x ~/procs/startup.sh
 sudo cp procs_exporter.service /etc/systemd/system/procs_exporter.service
 ```
 + 启动服务
