@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 User=longfengpili
-ExecStart=/home/longfengpili/procs/startup.sh
+ExecStart=/home/longfengpili/procs/procs_exporter.sh
 Restart=always
 RestartSec=5
 

@@ -8,20 +8,9 @@ process-exporter -config.path filename.yml
 ```
 
 ## service
-+ 复制文件
-```
-mkdir ~/procs
-cp ./startup.sh ~/procs/startup.sh
-cp ./process.yml ~/procs/process.yml
-chmod +x ~/procs/startup.sh
-sudo cp procs_exporter.service /etc/systemd/system/procs_exporter.service
-```
 + 启动服务
 ```bash
-sudo systemctl daemon-reload
-sudo systemctl enable procs_exporter.service
-sudo systemctl start procs_exporter.service
-sudo systemctl status procs_exporter.service
+~/procs/startup.sh
 ```
 
 

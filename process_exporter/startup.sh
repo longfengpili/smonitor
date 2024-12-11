@@ -2,6 +2,16 @@
 # @Author: longfengpili
 # @Date:   2024-12-11 16:05:52
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-12-11 17:28:33
+# @Last Modified time: 2024-12-11 17:31:26
 
-~/procs/process-exporter -config.path ~/procs/process.yml
+mkdir ~/procs
+cp ./startup.sh ~/procs/startup.sh
+cp ./process.yml ~/procs/process.yml
+chmod +x ~/procs/startup.sh
+sudo cp procs_exporter.service /etc/systemd/system/procs_exporter.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable procs_exporter.service
+sudo systemctl start procs_exporter.service
+sudo systemctl status procs_exporter.service
+
