@@ -1,6 +1,7 @@
+#!/bin/bash
 # @Author: longfengpili
 # @Date:   2024-12-11 16:05:52
 # @Last Modified by:   longfengpili
-# @Last Modified time: 2024-12-11 17:17:50
+# @Last Modified time: 2024-12-11 17:28:33
 
-/home/longfengpili/procs/process-exporter -config.path /home/longfengpili/procs/process.yml
+~/procs/process-exporter -config.path ~/procs/process.yml
