@@ -1,0 +1,13 @@
+[Unit]
+Description=My Custom Service
+After=network.target
+
+[Service]
+Type=simple
+User=longfengpili
+ExecStart=/home/longfengpili/procs/startup.sh
+Restart=on-always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

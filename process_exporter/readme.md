@@ -6,6 +6,22 @@
 ```bash
 process-exporter -config.path filename.yml
 ```
+
+## service
++ 复制文件
+```
+cp ./startup.sh ~/procs/startup.sh
+cp procs-exporter.service /etc/systemd/system/procs-exporter.service
+```
++ 启动服务
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable procs-exporter.service
+sudo systemctl start procs-exporter.service
+sudo systemctl status procs-exporter.service
+```
+
+
 ## docker
 ```bash
 docker-compose up -d
