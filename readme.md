@@ -1,9 +1,25 @@
 # 监控服务器性能
-# 部署prometheus、grafana
+
+
+## 区别`prom/node-exporter` 和 `ncabatoff/process-exporter`
+`node-exporter` 关注整个主机的指标，而 `process-exporter` 关注特定进程的指标。根据您的监控需求，可以选择适合的镜像。
+
+1. **prom/node-exporter**：
+   - **功能**：主要用于收集和暴露主机的系统级指标，如 CPU、内存、磁盘等性能数据。
+   - **使用场景**：通常与 Prometheus 一起使用，以监控整个主机的健康状态和性能。
+   - **特点**：提供了丰富的系统指标，能够监控主机的运行状况，适用于对基础设施进行监控的场景。
+
+2. **ncabatoff/process-exporter**：
+   - **功能**：专门用于收集和暴露特定进程的指标，可以监控系统中运行的特定应用程序的性能。
+   - **使用场景**：适合需要对特定进程进行深入监控的场景，比如业务应用的性能监测。
+   - **特点**：可以针对特定进程配置监控，提供有关进程的详细数据，如 CPU 使用率、内存消耗等。
+
+
+## 部署prometheus、grafana
 ```
 docker-compose up -d
 ```
-# prometheus配置
+## prometheus配置
 ```
 # 我的全局配置
 global:
@@ -37,7 +53,7 @@ scrape_configs:
 
 ```
 
-# 部署node_exporter(监控服务器)
+## 部署node_exporter(监控服务器)
 1. 建立容器
 ```bash
 docker-compose -f docker-compose-nodeexporter.yml up -d
@@ -53,7 +69,7 @@ curl ip:9100
       - targets: ['ip:9100']
 ```
 
-# trino monitor
+## trino monitor
 1. 下载[jmx_prometheus_javaagent](https://github.com/prometheus/jmx_exporter)
 ```base
 mkdir jmx-exporter
@@ -84,8 +100,8 @@ curl localhost:3900
       - targets: ['host:3900']
 ```
 
-# jmx_config
-## [authentication](http://prometheus.github.io/jmx_exporter/1.1.0/http-mode/authentication/)
+## jmx_config
+### [authentication](http://prometheus.github.io/jmx_exporter/1.1.0/http-mode/authentication/)
 + 计算方法
 ```python
 import hashlib
@@ -161,3 +177,8 @@ rate(http_requests_total[$__rate_interval])
 avg_over_time(cpu_usage[$__interval])
 ```
 在这个PromQL查询中，`$__interval` 决定了 `avg_over_time` 中使用的数据窗口大小，这确保了图表数据点的清晰度和可读性。
+
+
+
+
+- 
