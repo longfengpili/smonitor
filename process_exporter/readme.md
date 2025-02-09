@@ -4,7 +4,7 @@
 # 启动
 ## bash
 ```bash
-process-exporter -config.path filename.yml
+process-exporter -config.path filename.yml --web.listen-address=:9256
 ```
 
 ## service
