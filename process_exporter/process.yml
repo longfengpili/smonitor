@@ -15,6 +15,6 @@ process_names:
     cmdline:
     - 'trino'
 
-  - name: "{{.Comm}}"
+  - name: "{{.ExeFull}}"
     cmdline:
     - '.+'
